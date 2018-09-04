@@ -4,13 +4,13 @@ body {
 
 header {
       background: #03a9f4;
+      text-align: center;
 }
 
 .logo {
   color: #fff;
   font-size: 40px;
   font-family: 'Anton';
-  text-align: center;
 }
 
 header input {
