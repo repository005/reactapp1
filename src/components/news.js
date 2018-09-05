@@ -1,9 +1,17 @@
 import React from 'react';
+import NewsItem from './news-item';
 
 const News = (props) => {
-  console.log(props.news);
+
+  const items = props.news.map((item) => {
+    return (
+      <NewsItem key={item.id} item={item} />
+    )
+  });
   
-  return <div>News</div>
+  return <div>
+    {items}
+  </div>
 }
 
 export default News;

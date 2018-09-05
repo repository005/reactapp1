@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import JSON from './db.json';
@@ -6,7 +6,7 @@ import JSON from './db.json';
 import Header from './components/header';
 import News from './components/news';
 
-class App extends React.Component {
+class App extends Component {
 
   state = {
     news: JSON
@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <News news={this.state.news}/>
+        <News news={this.state.news} />
       </div>
     )
   }
