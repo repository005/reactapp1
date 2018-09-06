@@ -1,35 +1,32 @@
 import React,{ Component } from 'react';
-import '../css/styles.css';
 
 class Header extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      title: 'The keywords are: ',
-      keywords: ''
+      active: false
     }
   }
   
   inputChangeHandler = (event) => {
-    // console.log(event.target.value);
+    const value = event.target.value === '' ? false : true;
     this.setState({
-      keywords: event.target.value
+      active: value
     })
   }
 
   render() {
+    
     return (
-      <header>
+      <header style={{background: `${this.state.active ? '#ea0065' : '#0060fc'}`}}>
         <div 
         className="logo">Logo</div>
         <input 
           type="text" 
-          onChange = {this.inputChangeHandler}
+          onChange = {this.props.keywords}
         />
-        <div>{this.state.title}</div>
-        <div>{this.state.keywords}</div>
       </header>
     )
   }

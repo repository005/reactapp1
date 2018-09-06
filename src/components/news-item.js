@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const NewsItem = ({item}) => {
   return (
-    <div>
-      <h3>{item.title}</h3>
+    <div className="news-item">
+      <h4>{item.title}</h4>
       <div>{item.feed}</div>
     </div>
   )
